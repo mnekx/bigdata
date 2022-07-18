@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getData } from '../../helpers/helpers';
 import CanvasJSReact from '../../canvasjs-3.6.6/canvasjs.react';
-const CanvasJS = CanvasJSReact.CanvasJS;
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const Graph = ({ data }) => {
