@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 
 const Tabler = ({ data }) => {
   const [dataToShow, setDataToShow] = useState(data);
-  const rows = dataToShow.map((item) => {
+  const rows = dataToShow?.map((item) => {
     return (
       <tr className={`${styles.Tr}`} key={item['_id']}>
         <td>{item['countryName']}</td>
@@ -51,54 +51,57 @@ const Tabler = ({ data }) => {
     setDataToShow(newDataToShow);
   };
   return (
-    <div className={`${styles.Container}`}>
+    <section className={`${styles.Container}`}>
+      <h2>Table</h2>
       <input
         type='text'
         onChange={(e) => handleChange(e)}
         placeholder='search'
       />
-      <table>
-        <thead>
-          <tr>
-            <th>Country Name</th>
-            <th>Country Code</th>
-            <th>Indicator Name</th>
-            <th>1990</th>
-            <th>1991</th>
-            <th>1992</th>
-            <th>1993</th>
-            <th>1994</th>
-            <th>1995</th>
-            <th>1996</th>
-            <th>1997</th>
-            <th>1998</th>
-            <th>1999</th>
-            <th>2000</th>
-            <th>2001</th>
-            <th>2002</th>
-            <th>2003</th>
-            <th>2004</th>
-            <th>2005</th>
-            <th>2006</th>
-            <th>2007</th>
-            <th>2008</th>
-            <th>2009</th>
-            <th>2010</th>
-            <th>2011</th>
-            <th>2012</th>
-            <th>2013</th>
-            <th>2014</th>
-            <th>2015</th>
-            <th>2016</th>
-            <th>2017</th>
-            <th>2018</th>
-            <th>2019</th>
-            <th>2020</th>
-          </tr>
-        </thead>
-        <tbody className={`${styles.TBody}`}>{rows}</tbody>
-      </table>
-    </div>
+      <div className={`${styles.TableContainer}`}>
+        <table>
+          <thead>
+            <tr>
+              <th>Country Name</th>
+              <th>Country Code</th>
+              <th>Indicator Name</th>
+              <th>1990</th>
+              <th>1991</th>
+              <th>1992</th>
+              <th>1993</th>
+              <th>1994</th>
+              <th>1995</th>
+              <th>1996</th>
+              <th>1997</th>
+              <th>1998</th>
+              <th>1999</th>
+              <th>2000</th>
+              <th>2001</th>
+              <th>2002</th>
+              <th>2003</th>
+              <th>2004</th>
+              <th>2005</th>
+              <th>2006</th>
+              <th>2007</th>
+              <th>2008</th>
+              <th>2009</th>
+              <th>2010</th>
+              <th>2011</th>
+              <th>2012</th>
+              <th>2013</th>
+              <th>2014</th>
+              <th>2015</th>
+              <th>2016</th>
+              <th>2017</th>
+              <th>2018</th>
+              <th>2019</th>
+              <th>2020</th>
+            </tr>
+          </thead>
+          <tbody className={`${styles.TBody}`}>{rows}</tbody>
+        </table>
+      </div>
+    </section>
   );
 };
 
