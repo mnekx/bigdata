@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Uploader from './features/upload/Uploader';
-import Graph from "./features/graph/Graph";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,8 +12,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}>
-          <Route index path="upload" element={<Uploader />}></Route>
-          <Route path="graph" element={<Graph/>}></Route>
+          <Route index path='upload' element={<Uploader />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
