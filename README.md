@@ -28,10 +28,6 @@
 10. npm start
 11. access the app on http://localhost:3000/
 
-### Deployment
-
-https://crypto-tickers.herokuapp.com/
-
 ## Authors
 
 👤 **Mnemba Chambuya**
@@ -54,6 +50,3 @@ Give a ⭐️ if you like this project!
 
 This project is [MIT](./MIT.md) licensed.
 
-## Aknowledgements
-
-Thanks to Nelson Sakwa, author of the original [design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)).
