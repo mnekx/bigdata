@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import Tabler from "../table/Tabler";
+import Tabler from '../table/Tabler';
+import Graph from '../graph/Graph';
 
 const Uploader = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -16,7 +17,6 @@ const Uploader = () => {
     })
       .then((response) => response.json())
       .then((result) => {
-        console.log(result)
         setData(result);
       })
       .catch((error) => {
@@ -30,7 +30,8 @@ const Uploader = () => {
       <button type='button' onClick={onFileUpload}>
         upload
       </button>
-      {data ? <Tabler data={data}/> : 'No data yet or loading...'}
+      {data ? <Tabler data={data} /> : <p>No data yet or loading...</p>}
+      {data ? <Graph data={data} /> : <p>No data yet or loading...</p>}
     </div>
   );
 };
