@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Tabler from '../table/Tabler';
 import Graph from '../graph/Graph';
+import styles from './style.module.css';
 
 const Uploader = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -25,7 +26,7 @@ const Uploader = () => {
   };
 
   return (
-    <div>
+    <div className={`${styles.Container}`}>
       <input type='file' onChange={onFilechange} />
       <button type='button' onClick={onFileUpload}>
         upload

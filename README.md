@@ -1,6 +1,3 @@
-# bigdata
-
-
 # Bigdata
 
 ## Screenshot ![screenshot](./screenshot.png)
