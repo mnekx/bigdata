@@ -2,6 +2,11 @@
     margin-top: 3rem;
 }
 
+.TableContainer {
+    overflow: auto;
+    height: 70vh;
+}
+
 .TBody {}
 
 .Tr {}
