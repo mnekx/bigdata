@@ -5,10 +5,6 @@ const cors = require('cors');
 const fs = require('fs');
 const helpers = require('./helpers/saveData');
 require('dotenv/config');
-// const staffRoute = require('./routes/staff');
-// const customerRoute = require('./routes/customers');
-// const repaymentsRoute = require('./routes/repayments');
-// const loansRoutes = require('./routes/loans');
 const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 3001;
@@ -30,11 +26,6 @@ app.use(
 );
 
 app.use(bodyParser.json());
-
-// app.use('/staff', staffRoute);
-// app.use('/customers', customerRoute);
-// app.use('/repayments', repaymentsRoute);
-// app.use('/loans', loansRoutes);
 
 app.get('/api', (req, res) => {
   res.json({ message: 'Hello from server!' });
